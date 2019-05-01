@@ -1,0 +1,5 @@
+1   Q0  FSP940107-073 0   0.457804  guilherme_natasha
+1   Q0  FSP940630-029 1   0.358837  guilherme_natasha
+...
+10  Q0  FSP941124-052 98  0.024405  guilherme_natasha
+10  Q0  FSP940320-050 99  0.023134  guilherme_natasha

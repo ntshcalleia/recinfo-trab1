@@ -1,10 +1,9 @@
 # Parser
-- [ ] Parser para JSON
-- [ ] Remover stopwords
+- [x] Parser para JSON
+- [ ] Remoção de stopwords
 - [ ] Stemming
 
 # Tantivy
-- [ ] Aprender a usar a ferramenta
 - [ ] Definir como realizar a busca
 - [ ] Retornar score de similaridade
 

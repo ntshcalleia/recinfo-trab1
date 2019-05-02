@@ -18,6 +18,6 @@ for filename in os.listdir(path):
         data = json.load(read_file, object_hook=lambda d: SimpleNamespace(**d))
 
     for document in data.hits:
-        outfile.write(str(queries_dic[data.q]) + ' Q0 ' + (vars(document.doc)['title'])[0] + ' ' + str(document.score) + ' natasha_guilherme' + '\n')
+        outfile.write(str(queries_dic[data.q]) + ' Q0 ' + (vars(document.doc)['docno'])[0] + ' ' + str(document.score) + ' natasha_guilherme' + '\n')
 
 outfile.close()

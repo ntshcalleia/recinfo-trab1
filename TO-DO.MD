@@ -5,7 +5,8 @@
 
 # Tantivy
 - [ ] Definir como realizar a busca
-- [ ] Retornar score de similaridade
+- [x] Retornar score de similaridade
+- [ ] Parser para a saída esperada (salvar em resultado.txt)
 
 # Relatório
 - [ ] Descrever técnicas de pré-processamento

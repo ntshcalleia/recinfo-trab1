@@ -1,15 +1,15 @@
 # Parser
 - [x] Parser para JSON
-- [x] Remoção de stopwords
-- [x] Stemming
+- [x] Stemming e remoção de stopwords
 
 # Tantivy
-- [x] Definir como realizar a busca
-- [x] Retornar score de similaridade
-- [x] Parser para a saída esperada (salvar em resultado.txt)
 - [x] Criar schema
-- [ ] Indexar dados
+- [x] Indexar dados
+
+# Consultas
+- [x] Stemming e remoção de stopwords
 - [ ] Realizar consultas
+- [x] Parser para a saída esperada
 
 # Relatório
 - [ ] Descrever técnicas de pré-processamento

@@ -1,5 +1,21 @@
 {
-  "segments": [],
+  "segments": [
+    {
+      "segment_id": "ca3a9171-66f1-46b8-9c08-771b26bada80",
+      "max_doc": 34689,
+      "deletes": null
+    },
+    {
+      "segment_id": "22668619-960e-4c17-a654-c236851bf9c7",
+      "max_doc": 34644,
+      "deletes": null
+    },
+    {
+      "segment_id": "81592e8a-bb25-4370-bc3c-64640d49d9fa",
+      "max_doc": 34580,
+      "deletes": null
+    }
+  ],
   "schema": [
     {
       "name": "docno",
@@ -21,5 +37,5 @@
       }
     }
   ],
-  "opstamp": 0
+  "opstamp": 103916
 }

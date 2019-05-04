@@ -7,6 +7,7 @@
 - [x] Definir como realizar a busca
 - [x] Retornar score de similaridade
 - [x] Parser para a saída esperada (salvar em resultado.txt)
+- [x] Criar schema
 - [ ] Indexar dados
 - [ ] Realizar consultas
 

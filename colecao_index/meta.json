@@ -1,0 +1,25 @@
+{
+  "segments": [],
+  "schema": [
+    {
+      "name": "docno",
+      "type": "text",
+      "options": {
+        "indexing": null,
+        "stored": true
+      }
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "freq",
+          "tokenizer": "default"
+        },
+        "stored": false
+      }
+    }
+  ],
+  "opstamp": 0
+}

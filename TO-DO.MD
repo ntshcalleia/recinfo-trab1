@@ -8,7 +8,7 @@
 
 # Consultas
 - [x] Stemming e remoção de stopwords
-- [ ] Realizar consultas
+- [x] Realizar consultas
 - [x] Parser para a saída esperada
 
 # Relatório

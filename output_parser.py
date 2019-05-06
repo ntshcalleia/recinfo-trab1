@@ -2,7 +2,7 @@ import json
 import os
 from types import SimpleNamespace
 
-path = './json_outputs/'
+path = './output/'
 
 queries_dic = {}
 queries = open("stemmed_queries.txt", "r", encoding="mbcs")
@@ -11,7 +11,7 @@ for line in queries:
     queries_dic[line.rstrip()] = i
     i+=1
 
-outfile = open("resultado.txt","w+")
+outfile = open(path+"resultado.txt","w+")
 
 for filename in os.listdir(path):
     with open(path+filename, "r", encoding="mbcs") as read_file:

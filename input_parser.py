@@ -4,10 +4,9 @@ import codecs
 import nltk
 from html.parser import HTMLParser
 
-path = './colecao_teste/'
+path = './colecao/'
 
 stemmer = nltk.stem.RSLPStemmer()
-stopwords = nltk.corpus.stopwords.words('portuguese')
 
 class SGMLParser(HTMLParser):
   def __init__(self, raise_exception = True) :
@@ -48,7 +47,6 @@ class SGMLParser(HTMLParser):
     if len(data) > 1 and self.process_data:
       if self.cur_tag == "text":
         tokens = re.findall(r"[\w'-]+", data)
-        tokens = list(filter(lambda x: x.lower() not in stopwords, tokens))
         tokens = list(map(lambda x: stemmer.stem(x), tokens))
         data = " ".join(tokens)
       self.doc += f'"{data}"'

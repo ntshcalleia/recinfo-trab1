@@ -5,13 +5,13 @@ from types import SimpleNamespace
 path = './output/'
 
 queries_dic = {}
-queries = open("stemmed_queries.txt", "r", encoding="mbcs")
+queries = open("queries.txt", "r", encoding="mbcs")
 i=1
 for line in queries:
     queries_dic[line.rstrip()] = i
     i+=1
 
-outfile = open(path+"resultado.txt","w+")
+outfile = open("output.txt","w+")
 
 for filename in os.listdir(path):
     with open(path+filename, "r", encoding="mbcs") as read_file:

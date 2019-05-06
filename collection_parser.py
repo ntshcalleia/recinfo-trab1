@@ -4,7 +4,7 @@ import codecs
 import nltk
 from html.parser import HTMLParser
 
-path = './colecao/'
+path = './collection/'
 
 stemmer = nltk.stem.RSLPStemmer()
 

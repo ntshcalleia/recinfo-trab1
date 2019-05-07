@@ -2,9 +2,9 @@ import json
 import os
 from types import SimpleNamespace
 
-path = './output2/'
+path = './output/'
 
-outfile = open("output2.txt","w+")
+outfile = open("output.txt","w+")
 
 for filename in os.listdir(path):
     with open(path+filename, "r") as read_file:

@@ -7,6 +7,7 @@ from html.parser import HTMLParser
 path = './collection/'
 
 stemmer = nltk.stem.RSLPStemmer()
+stopwords = nltk.corpus.stopwords.words('portuguese')
 
 class SGMLParser(HTMLParser):
   def __init__(self, raise_exception = True) :
@@ -47,13 +48,14 @@ class SGMLParser(HTMLParser):
     if len(data) > 1 and self.process_data:
       if self.cur_tag == "text":
         tokens = re.findall(r"[\w'-]+", data)
+        tokens = list(filter(lambda x: x.lower() not in stopwords, tokens))
         tokens = list(map(lambda x: stemmer.stem(x), tokens))
         data = " ".join(tokens)
       self.doc += f'"{data}"'
 
 parser = SGMLParser()
 
-json_output = open(f'colecao.json', 'w+')
+json_output = open(f'collection.json', 'w+')
 for filename in os.listdir(path):
   with codecs.open(f'{path}{filename}', 'r', encoding='latin-1') as sgml_input:
     json_output.write(parser.to_json(sgml_input.read()))

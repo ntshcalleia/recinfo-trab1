@@ -1,0 +1,65 @@
+{
+  "q": "+ativ +eta +franc",
+  "num_hits": 5,
+  "hits": [
+    {
+      "score": 13.491916,
+      "doc": {
+        "docno": [
+          "FSP950419-054"
+        ]
+      },
+      "id": 10264
+    },
+    {
+      "score": 12.698147,
+      "doc": {
+        "docno": [
+          "FSP951019-058"
+        ]
+      },
+      "id": 3005
+    },
+    {
+      "score": 11.903286,
+      "doc": {
+        "docno": [
+          "FSP950325-042"
+        ]
+      },
+      "id": 28551
+    },
+    {
+      "score": 11.852328,
+      "doc": {
+        "docno": [
+          "FSP950116-026"
+        ]
+      },
+      "id": 12114
+    },
+    {
+      "score": 7.427567,
+      "doc": {
+        "docno": [
+          "FSP950706-009"
+        ]
+      },
+      "id": 11694
+    }
+  ],
+  "timings": {
+    "timings": [
+      {
+        "name": "search",
+        "duration": 423,
+        "depth": 0
+      },
+      {
+        "name": "fetching docs",
+        "duration": 412,
+        "depth": 0
+      }
+    ]
+  }
+}

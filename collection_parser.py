@@ -1,6 +1,8 @@
 import os
 import re
 import codecs
+import unicodedata
+import functools
 import nltk
 from html.parser import HTMLParser
 
@@ -8,6 +10,28 @@ path = './collection/'
 
 stemmer = nltk.stem.RSLPStemmer()
 stopwords = nltk.corpus.stopwords.words('portuguese')
+
+def strip_accents(text):
+  try:
+      text = unicode(text, 'utf-8')
+  except NameError: # unicode is a default on python 3 
+      pass
+
+  text = unicodedata.normalize('NFD', text)\
+          .encode('ascii', 'ignore')\
+          .decode("utf-8")
+
+  return str(text)
+
+def process_tokens(obj, token):
+  if token.lower() not in stopwords:
+    unaccented_string = strip_accents(token)
+    try:
+      obj.append(stemmer.stem(unaccented_string))
+    except:
+      if token not in ['º', 'ª', '²']:
+        print(f'{token} não foi processado.')
+  return obj
 
 class SGMLParser(HTMLParser):
   def __init__(self, raise_exception = True) :
@@ -48,8 +72,7 @@ class SGMLParser(HTMLParser):
     if len(data) > 1 and self.process_data:
       if self.cur_tag == "text":
         tokens = re.findall(r"[\w'-]+", data)
-        tokens = list(filter(lambda x: x.lower() not in stopwords, tokens))
-        tokens = list(map(lambda x: stemmer.stem(x), tokens))
+        tokens = list(functools.reduce(process_tokens, tokens, []))
         data = " ".join(tokens)
       self.doc += f'"{data}"'
 
